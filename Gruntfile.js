@@ -39,25 +39,44 @@ module.exports = function (grunt) {
             expand: true,
             cwd: '.tmp/source',
             src: ['*.svg', '*.png'],
-            dest: "output/grunticon"
+            dest: 'output/grunticon'
           }
         ],
         options: {
         }
       }
+    },
+    'svg-sprites': {
+      'ui-separate': {
+        options: {
+          spriteElementPath: '.tmp/source/',
+          spritePath: 'output/svg-sprites/img/',
+          cssPath: 'output/svg-sprites/css',
+          cssPrefix: 'labs',
+          prefix: 'icon',
+          sizes: {
+            std: 18
+          },
+          refSize: 17,
+          unit: 20
+        }
+      }
     }
   });
 
-  grunt.loadNpmTasks('grunt-webfont');
   grunt.loadNpmTasks('grunt-svgmin');
-  grunt.loadNpmTasks('grunt-grunticon');
   grunt.loadNpmTasks('grunt-contrib-clean');
 
-  grunt.registerTask("default", [
+  grunt.loadNpmTasks('grunt-webfont');
+  grunt.loadNpmTasks('grunt-grunticon');
+  grunt.loadNpmTasks('grunt-dr-svg-sprites');
+
+  grunt.registerTask('default', [
     'clean',
     'svgmin',
     'webfont',
     'grunticon',
+    'svg-sprites',
     'clean:tmp'
   ]);
 };

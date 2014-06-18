@@ -4,7 +4,8 @@
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-grunticon": "^1.2.6",
-    "grunt-webfont": "^0.4.2"
+    "grunt-webfont": "^0.4.2",
+    "grunt-dr-svg-sprites": "^0.9.4"
   },
   "dependencies": {
     "grunt": "^0.4.5",
