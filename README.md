@@ -16,3 +16,8 @@ icon solutions compare
   
   More: [grunt-dr-svg-sprites on Github](https://github.com/drdk/grunt-dr-svg-sprites)
 
+
+Reference:
+
+
++ [http://benfrain.com/image-sprites-data-uris-icon-fonts-v-svgs/](http://benfrain.com/image-sprites-data-uris-icon-fonts-v-svgs/)
