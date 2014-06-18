@@ -1,4 +1,4 @@
 labs-icon
 =========
 
-icon solutions
+icon solutions compare
