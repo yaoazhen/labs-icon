@@ -5,7 +5,7 @@ module.exports = function (grunt) {
 
     clean: {
       tmp:'.tmp/',
-      dist: 'output/'
+      dist: 'dist/'
     },
     svgmin: {
       options: {
@@ -28,8 +28,8 @@ module.exports = function (grunt) {
     webfont: {
       icons: {
         src: '.tmp/source/*.svg',
-        destCss: 'output/grunt-webfont/css',
-        dest: 'output/grunt-webfont/fonts'
+        destCss: 'dist/grunt-webfont/css',
+        dest: 'dist/grunt-webfont/fonts'
       }
     },
     grunticon: {
@@ -39,7 +39,7 @@ module.exports = function (grunt) {
             expand: true,
             cwd: '.tmp/source',
             src: ['*.svg', '*.png'],
-            dest: 'output/grunticon'
+            dest: 'dist/grunticon'
           }
         ],
         options: {
@@ -50,8 +50,8 @@ module.exports = function (grunt) {
       'ui-separate': {
         options: {
           spriteElementPath: '.tmp/source/',
-          spritePath: 'output/svg-sprites/img/',
-          cssPath: 'output/svg-sprites/css',
+          spritePath: 'dist/svg-sprites/img/',
+          cssPath: 'dist/svg-sprites/css',
           cssPrefix: 'labs',
           prefix: 'icon',
           sizes: {
